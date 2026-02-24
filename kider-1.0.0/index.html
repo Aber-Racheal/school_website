@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kider - Preschool Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .team-item img {
+    transition: transform 0.3s ease;
+}
+
+.team-item:hover img {
+    transform: scale(1.05);
+}
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+       <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+    <a href="index.html" class="navbar-brand">
+        <h1 class="m-0 text-primary">
+            <i class="fa fa-book-reader me-3"></i>Brights
+        </h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto">
+
+            <!-- Home -->
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+
+            <!-- About Us -->
+           <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
+                <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                    <a href="about.html#about-school" class="dropdown-item">About the School</a>
+                    <a href="about.html#vision-mission" class="dropdown-item">Vision & Mission</a>
+                    <a href="about.html#our-history" class="dropdown-item">Our History</a>
+                    <a href="about.html#administration" class="dropdown-item">Administration</a>
+                    <a href="about.html#school-staff" class="dropdown-item">School Staff</a>
+                    <a href="about.html#rules-regulations" class="dropdown-item">Rules & Regulations</a>
+                </div>
+            </div>
+
+
+             <!-- Academics -->
+                    <div class="nav-item dropdown">
+                        <a href="academics.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="academics.html#curriculum" class="dropdown-item">Curriculum</a>
+                            <a href="academics.html#classes-sections" class="dropdown-item">Classes & Sections</a>
+                            <a href="academics.html#subjects-offered" class="dropdown-item">Subjects Offered</a>
+                        </div>
+                    </div>
+
+             <!-- Admissions -->
+                    <div class="nav-item dropdown">
+                        <a href="admissions.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admissions</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="admissions.html#requirements" class="dropdown-item">Requirements</a>
+                            <a href="admissions.html#fees-structure" class="dropdown-item">Fees Structure</a>
+                            <a href="admissions.html#how-to-apply" class="dropdown-item">How to Apply</a>
+                            <a href="admissions.html#school-uniform" class="dropdown-item">School Uniform</a>
+                        </div>
+                    </div>
+
+             <!-- School Life -->
+                    <div class="nav-item dropdown">
+                        <a href="school-life.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">School Life</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="school-life.html#school-menu" class="dropdown-item">School Menu</a>
+                            <a href="school-life.html#student-leadership" class="dropdown-item">Student Leadership</a>
+                            <a href="school-life.html#co-curricular" class="dropdown-item">Co-curricular Activities</a>
+                            <a href="school-life.html#transport" class="dropdown-item">Transport Services</a>
+                            <a href="school-life.html#health-services" class="dropdown-item">Health Services</a>
+                            <a href="school-life.html#pastoral-care" class="dropdown-item">Pastoral Care</a>
+                        </div>
+                    </div>
+
+           <!-- News & Events -->
+                    <div class="nav-item dropdown">
+                        <a href="news-events.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">News & Events</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="news-events.html#news-announcements" class="dropdown-item">News & Announcements</a>
+                            <a href="news-events.html#events-calendar" class="dropdown-item">Events & Calendar</a>
+                            <a href="news-events.html#academic-calendar" class="dropdown-item">Academic Calendar</a>
+                        </div>
+                    </div>
+
+            <!-- Gallery -->
+            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+
+            <!-- Contact -->
+            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+        </div>
+
+         <!-- Call to Action -->
+                <a href="admissions.html#how-to-apply" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">
+                    Apply Now <i class="fa fa-arrow-right ms-3"></i>
+                </a>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+
+   <!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5">
+    <div class="owl-carousel header-carousel position-relative">
+
+        <!-- Slide 1 -->
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="img/carousel-1.png" alt="Brights Nursery & Primary School">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h1 class="display-2 text-white animated slideInDown mb-4">
+                                Welcome to Brights Nursery & Primary School
+                            </h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                                A safe, nurturing, and supportive learning environment where young learners grow academically, socially, and morally from Nursery to Primary level.
+                            </p>
+                            <a href="about.html" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">
+                                Learn More
+                            </a>
+                            <a href="admissions.html" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">
+                                Admissions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="img/carousel-2.png" alt="Quality Education at Brights">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h1 class="display-2 text-white animated slideInDown mb-4">
+                                Nurturing Bright Minds for a Better Future
+                            </h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                                At Brights, we focus on quality education, discipline, creativity, and character development to prepare children for lifelong learning.
+                            </p>
+                            <a href="academics.html" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">
+                                Our Academics
+                            </a>
+                            <a href="contact.html" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Carousel End -->
+
+
+ <!-- Welcome Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-4">Welcome to Brights Nursery & Primary School</h1>
+                <p>
+                    Brights Nursery & Primary School is a caring and inclusive learning community where every child is encouraged to grow academically, socially, and morally.
+                </p>
+                <p class="mb-4">
+                    We partner closely with parents to provide a strong foundation for lifelong learning through a balanced curriculum, discipline, and co-curricular activities.
+                </p>
+
+                <div class="row g-4 align-items-center">
+                    <div class="col-sm-6">
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="about.html">Read More</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle flex-shrink-0" src="img/user.png" alt="" style="width: 45px; height: 45px;">
+                            <div class="ms-3">
+                                <h6 class="text-primary mb-1">Head Teacher</h6>
+                                <small>Brights Nursery & Primary</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img class="img-fluid w-75 rounded-circle bg-light p-3" src="img/about-1.png" alt="">
+                    </div>
+                    <div class="col-6 text-start" style="margin-top: -150px;">
+                        <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/about-2.png" alt="">
+                    </div>
+                    <div class="col-6 text-end" style="margin-top: -150px;">
+                        <img class="img-fluid w-100 rounded-circle bg-light p-3" src="img/about-3.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Welcome End -->
+
+
+<!-- Home Highlights Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Why Parents Choose Brights</h1>
+            <p>At Brights Nursery & Primary School, we focus on safety, quality learning, and holistic child development.</p>
+        </div>
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="facility-item">
+                    <div class="facility-icon bg-primary">
+                        <span class="bg-primary"></span>
+                        <i class="fa fa-bus-alt fa-3x text-primary"></i>
+                        <span class="bg-primary"></span>
+                    </div>
+                    <div class="facility-text bg-primary">
+                        <h3 class="text-primary mb-3">School Transport</h3>
+                        <p class="mb-0">Reliable school transport to ensure learners arrive safely and on time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="facility-item">
+                    <div class="facility-icon bg-success">
+                        <span class="bg-success"></span>
+                        <i class="fa fa-futbol fa-3x text-success"></i>
+                        <span class="bg-success"></span>
+                    </div>
+                    <div class="facility-text bg-success">
+                        <h3 class="text-success mb-3">Play & Sports</h3>
+                        <p class="mb-0">Safe playgrounds and sports activities that support physical development.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="facility-item">
+                    <div class="facility-icon bg-warning">
+                        <span class="bg-warning"></span>
+                        <i class="fa fa-home fa-3x text-warning"></i>
+                        <span class="bg-warning"></span>
+                    </div>
+                    <div class="facility-text bg-warning">
+                        <h3 class="text-warning mb-3">School Meals</h3>
+                        <p class="mb-0">Nutritious meals prepared in a clean and child-friendly environment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="facility-item">
+                    <div class="facility-icon bg-info">
+                        <span class="bg-info"></span>
+                        <i class="fa fa-chalkboard-teacher fa-3x text-info"></i>
+                        <span class="bg-info"></span>
+                    </div>
+                    <div class="facility-text bg-info">
+                        <h3 class="text-info mb-3">Quality Teaching</h3>
+                        <p class="mb-0">Dedicated teachers focused on nurturing academic and moral excellence.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Home Highlights End -->
+
+
+<!-- Classes Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Our Academic Levels</h1>
+            <p>
+                Brights Nursery & Primary School offers a well-structured learning journey from early childhood to primary education, supporting every child’s growth stage.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Baby Class -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="classes-item">
+                    <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                        <img class="img-fluid rounded-circle" src="img/classes-1.jpg" alt="">
+                    </div>
+                    <div class="bg-light rounded p-4 pt-5 mt-n5 text-center">
+                        <h3 class="mt-3 mb-3">Baby Class</h3>
+                        <p class="mb-4">
+                            A gentle introduction to school through play-based learning, social interaction, and basic skills development.
+                        </p>
+                        <div class="row g-1">
+                            <div class="col-6">
+                                <div class="border-top border-3 border-primary pt-2">
+                                    <h6 class="text-primary mb-1">Age Group</h6>
+                                    <small>2 – 3 Years</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border-top border-3 border-success pt-2">
+                                    <h6 class="text-success mb-1">Focus</h6>
+                                    <small>Play & Social Skills</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Class -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="classes-item">
+                    <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                        <img class="img-fluid rounded-circle" src="img/classes-2.png" alt="">
+                    </div>
+                    <div class="bg-light rounded p-4 pt-5 mt-n5 text-center">
+                        <h3 class="mt-3 mb-3">Middle Class</h3>
+                        <p class="mb-4">
+                            Learners begin developing early literacy, numeracy, creativity, and confidence in a structured environment.
+                        </p>
+                        <div class="row g-1">
+                            <div class="col-6">
+                                <div class="border-top border-3 border-primary pt-2">
+                                    <h6 class="text-primary mb-1">Age Group</h6>
+                                    <small>3 – 4 Years</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border-top border-3 border-success pt-2">
+                                    <h6 class="text-success mb-1">Focus</h6>
+                                    <small>Language & Numbers</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Class -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="classes-item">
+                    <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                        <img class="img-fluid rounded-circle" src="img/classes-3.png" alt="">
+                    </div>
+                    <div class="bg-light rounded p-4 pt-5 mt-n5 text-center">
+                        <h3 class="mt-3 mb-3">Top Class</h3>
+                        <p class="mb-4">
+                            Preparing children for primary education through structured learning, discipline, and confidence building.
+                        </p>
+                        <div class="row g-1">
+                            <div class="col-6">
+                                <div class="border-top border-3 border-primary pt-2">
+                                    <h6 class="text-primary mb-1">Age Group</h6>
+                                    <small>4 – 5 Years</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border-top border-3 border-success pt-2">
+                                    <h6 class="text-success mb-1">Focus</h6>
+                                    <small>School Readiness</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lower Primary -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="classes-item">
+                    <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                        <img class="img-fluid rounded-circle" src="img/classes-4.png" alt="">
+                    </div>
+                    <div class="bg-light rounded p-4 pt-5 mt-n5 text-center">
+                        <h3 class="mt-3 mb-3">Lower Primary</h3>
+                        <p class="mb-4">
+                            A strong academic foundation focusing on literacy, numeracy, creativity, and character development.
+                        </p>
+                        <div class="row g-1">
+                            <div class="col-6">
+                                <div class="border-top border-3 border-primary pt-2">
+                                    <h6 class="text-primary mb-1">Classes</h6>
+                                    <small>P1 – P3</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border-top border-3 border-success pt-2">
+                                    <h6 class="text-success mb-1">Focus</h6>
+                                    <small>Core Skills</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upper Primary -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="classes-item">
+                    <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                        <img class="img-fluid rounded-circle" src="img/classes-5.png" alt="">
+                    </div>
+                    <div class="bg-light rounded p-4 pt-5 mt-n5 text-center">
+                        <h3 class="mt-3 mb-3">Upper Primary</h3>
+                        <p class="mb-4">
+                            Learners are prepared academically and socially for national examinations and future learning stages.
+                        </p>
+                        <div class="row g-1">
+                            <div class="col-6">
+                                <div class="border-top border-3 border-primary pt-2">
+                                    <h6 class="text-primary mb-1">Classes</h6>
+                                    <small>P4 – P7</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border-top border-3 border-success pt-2">
+                                    <h6 class="text-success mb-1">Focus</h6>
+                                    <small>Academic Excellence</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Co-Curricular -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="classes-item">
+                    <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                        <img class="img-fluid rounded-circle" src="img/classes-6.png" alt="">
+                    </div>
+                    <div class="bg-light rounded p-4 pt-5 mt-n5 text-center">
+                        <h3 class="mt-3 mb-3">Co-Curricular Activities</h3>
+                        <p class="mb-4">
+                            Sports, music, art, and leadership activities that support holistic child development.
+                        </p>
+                        <div class="row g-1">
+                            <div class="col-12">
+                                <div class="border-top border-3 border-warning pt-2">
+                                    <h6 class="text-warning mb-1">Activities</h6>
+                                    <small>Sports, Music & Clubs</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Classes End -->
+
+
+    <!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Meet Our School Leadership</h1>
+            <p>
+                At Brights Nursery & Primary School, our leadership team is committed to nurturing young minds,
+                guiding learners with care, discipline, and a strong foundation for lifelong learning.
+            </p>
+        </div>
+
+       <div class="row g-4">
+    
+    <!-- Head Teacher -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="team-item text-center">
+            <img class="img-fluid rounded-circle w-75 mb-4" src="img/user.png" alt="Head Teacher">
+            <h4 class="mb-1">MerylnGracious</h4>
+            <p class="text-muted">Head Teacher</p>
+        </div>
+    </div>
+
+    <!-- Deputy Head Teacher -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="team-item text-center">
+            <img class="img-fluid rounded-circle w-75 mb-4" src="img/deputy-head.png" alt="Deputy Head Teacher">
+            <h4 class="mb-1">HevertonOmilana</h4>
+            <p class="text-muted">Deputy Head Teacher</p>
+        </div>
+    </div>
+
+    <!-- Senior Teacher -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="team-item text-center">
+            <img class="img-fluid rounded-circle w-75 mb-4" src="img/senior-teacher.png" alt="Senior Teacher">
+            <h4 class="mb-1">CarrissaNakimuli</h4>
+            <p class="text-muted">Senior Teacher</p>
+        </div>
+    </div>
+
+</div>
+    </div>
+</div>
+<!-- Team End -->
+
+<!-- Parent Voices Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">What Parents Appreciate About Brights</h1>
+            <p>
+                We value strong partnerships with parents and guardians as we work together to support every child’s growth and development.
+            </p>
+        </div>
+
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+
+            <!-- Parent 1 -->
+            <div class="testimonial-item bg-light rounded p-5">
+                <p class="fs-5">
+                    Brights provides a caring and supportive environment where children feel safe, happy, and motivated to learn.
+                </p>
+                <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.png" style="width: 90px; height: 90px;">
+                    <div class="ps-3">
+                        <h3 class="mb-1">Parent</h3>
+                        <span>Nursery Section</span>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+                </div>
+            </div>
+
+            <!-- Parent 2 -->
+            <div class="testimonial-item bg-light rounded p-5">
+                <p class="fs-5">
+                    The teachers are committed and approachable, and communication with parents is clear and consistent.
+                </p>
+                <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.png" style="width: 90px; height: 90px;">
+                    <div class="ps-3">
+                        <h3 class="mb-1">Parent</h3>
+                        <span>Primary Section</span>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+                </div>
+            </div>
+
+            <!-- Parent 3 -->
+            <div class="testimonial-item bg-light rounded p-5">
+                <p class="fs-5">
+                    Brights focuses not only on academics but also on discipline, values, and the overall development of the child.
+                </p>
+                <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 90px; height: 90px;">
+                    <div class="ps-3">
+                        <h3 class="mb-1">Community Member</h3>
+                        <span>School Partner</span>
+                    </div>
+                    <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Parent Voices End -->
+
+<!-- Latest News & Updates Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Latest News & Updates</h1>
+            <p>Stay informed with the latest happenings, announcements, and important updates from our school community.</p>
+        </div>
+        <!-- News Cards -->
+        <div class="row g-4">
+            <!-- News Item 1 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/news-holiday.png" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Spring Term Enrollment Open</h5>
+                        <p class="card-text">Enrollment for the upcoming Spring term is now open. Secure your child's spot early for a year of learning and fun!</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Feb 9, 2026
+                    </div>
+                </div>
+            </div>
+            <!-- News Item 2 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/activity-art.png" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Art Competition Winners</h5>
+                        <p class="card-text">Congratulations to our talented students who participated in the annual art competition. Check out their amazing creations!</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Feb 5, 2026
+                    </div>
+                </div>
+            </div>
+            <!-- News Item 3 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/news-parents.png" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Parent-Teacher Meeting</h5>
+                        <p class="card-text">Join us for our upcoming parent-teacher meeting to discuss student progress, upcoming events, and ways to support learning at home.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Jan 30, 2026
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Latest News & Updates End -->
+
+<!-- Admissions Call To Action Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="bg-light rounded">
+            <div class="row g-0">
+
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="img/call-to-action.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="h-100 d-flex flex-column justify-content-center p-5">
+                        <h1 class="mb-4">Admissions Now Open</h1>
+                        <p class="mb-4">
+                            Applications for Nursery and Primary classes are now open. We welcome parents to visit the school or contact us for more information.
+                        </p>
+                        <a class="btn btn-primary py-3 px-5" href="admissions.html">
+                            View Admission Details <i class="fa fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Admissions Call To Action End -->
+
+
+      <!-- Appointment Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="bg-light rounded">
+            <div class="row g-0">
+                <!-- Form Start -->
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="h-100 d-flex flex-column justify-content-center p-5">
+                        <h1 class="mb-4">Make Appointment</h1>
+                        <form>
+                            <div class="row g-3">
+                                <!-- Guardian Name -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="gname" placeholder="Guardian Name">
+                                        <label for="gname">Guardian Name</label>
+                                    </div>
+                                </div>
+                                <!-- Guardian Email -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="gmail" placeholder="Guardian Email">
+                                        <label for="gmail">Guardian Email</label>
+                                    </div>
+                                </div>
+                                <!-- Child Name -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="cname" placeholder="Child Name">
+                                        <label for="cname">Child Name</label>
+                                    </div>
+                                </div>
+                                <!-- Child Age -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control border-0" id="cage" placeholder="Child Age">
+                                        <label for="cage">Child Age</label>
+                                    </div>
+                                </div>
+                                <!-- Child Class -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <select class="form-select border-0" id="cclass">
+                                            <option selected disabled>Choose Class</option>
+                                            <option>Pre-Nursery</option>
+                                            <option>Nursery</option>
+                                            <option>Lower Primary</option>
+                                            <option>Upper Primary</option>
+                                        </select>
+                                        <label for="cclass">Child Class</label>
+                                    </div>
+                                </div>
+                                <!-- Message -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <!-- Submit Button -->
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Form End -->
+
+                <!-- Image Section -->
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="img/appointment.png" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Appointment End -->
+
+
+ <!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Get In Touch</h3>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Kampala Road, Kampala, Uganda</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+256 700 123 456</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@schoolname.ug</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <!-- Navigation Links -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Quick Links</h3>
+                <a class="btn btn-link text-white-50" href="#">Home</a>
+                <a class="btn btn-link text-white-50" href="#">About Us</a>
+                <a class="btn btn-link text-white-50" href="#">Classes</a>
+                <a class="btn btn-link text-white-50" href="#">Teachers</a>
+                <a class="btn btn-link text-white-50" href="#">Contact Us</a>
+            </div>
+            <!-- Photo Gallery -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Photo Gallery</h3>
+                <div class="row g-2 pt-2">
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-2.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-3.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-4.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-5.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-6.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Location / Map -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Our Location</h3>
+                <iframe class="w-100 rounded" height="200" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.000000!2d32.583333!3d0.316667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db00!2sKampala%20Road!5e0!3m2!1sen!2sug!4v1600000000000!5m2!1sen!2sug" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Brights Nursery and Primary School</a>, All Rights Reserved.
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

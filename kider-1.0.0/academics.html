@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Brights - Preschool Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Academics Page Specific Styles */
+
+/* Classes Item Styling */
+.classes-item {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.classes-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Table Styling */
+.table th {
+    font-weight: 600;
+}
+
+.table-bordered {
+    border-color: #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border-color: #dee2e6;
+}
+
+/* Card Header Enhancement */
+.card-header {
+    border-bottom: none;
+}
+
+/* Subject List Styling */
+.list-unstyled li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.list-unstyled li:last-child {
+    border-bottom: none;
+}
+
+/* Accordion Styling */
+.accordion-button {
+    font-weight: 600;
+    color: var(--bs-primary);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    color: var(--bs-primary);
+}
+
+/* Schedule Table Responsive */
+@media (max-width: 768px) {
+    .table-responsive {
+        border: none;
+    }
+    
+    .table thead {
+        display: none;
+    }
+    
+    .table tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+    }
+    
+    .table tbody td {
+        display: block;
+        text-align: right;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+    
+    .table tbody td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        color: var(--bs-primary);
+    }
+    
+    .table tbody td:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Animation Delay Classes */
+.wow.delay-1 { animation-delay: 0.1s; }
+.wow.delay-2 { animation-delay: 0.2s; }
+.wow.delay-3 { animation-delay: 0.3s; }
+
+/* Icon Circle Enhancement */
+.rounded-circle {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Special Programs Card Hover */
+.text-center.p-3:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.05);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+   <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+    <a href="index.html" class="navbar-brand">
+        <h1 class="m-0 text-primary">
+            <i class="fa fa-book-reader me-3"></i>Brights
+        </h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto">
+
+            <!-- Home -->
+            <a href="index.html" class="nav-item nav-link">Home</a>
+
+            <!-- About Us -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
+                <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                    <a href="about.html#about-school" class="dropdown-item">About the School</a>
+                    <a href="about.html#vision-mission" class="dropdown-item">Vision & Mission</a>
+                    <a href="about.html#our-history" class="dropdown-item">Our History</a>
+                    <a href="about.html#administration" class="dropdown-item">Administration</a>
+                    <a href="about.html#school-staff" class="dropdown-item">School Staff</a>
+                    <a href="about.html#rules-regulations" class="dropdown-item">Rules & Regulations</a>
+                </div>
+            </div>
+
+           <!-- Academics -->
+                    <div class="nav-item dropdown">
+                        <a href="academics.html" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Academics</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="#curriculum" class="dropdown-item">Curriculum</a>
+                            <a href="#classes-sections" class="dropdown-item">Classes & Sections</a>
+                            <a href="#subjects-offered" class="dropdown-item">Subjects Offered</a>
+                        </div>
+                    </div>
+
+                 <!-- Admissions -->
+                    <div class="nav-item dropdown">
+                        <a href="admissions.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admissions</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="admissions.html#requirements" class="dropdown-item">Requirements</a>
+                            <a href="admissions.html#fees-structure" class="dropdown-item">Fees Structure</a>
+                            <a href="admissions.html#how-to-apply" class="dropdown-item">How to Apply</a>
+                            <a href="admissions.html#school-uniform" class="dropdown-item">School Uniform</a>
+                        </div>
+                    </div>
+  <!-- School Life -->
+                    <div class="nav-item dropdown">
+                        <a href="school-life.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">School Life</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="school-life.html#school-menu" class="dropdown-item">School Menu</a>
+                            <a href="school-life.html#student-leadership" class="dropdown-item">Student Leadership</a>
+                            <a href="school-life.html#co-curricular" class="dropdown-item">Co-curricular Activities</a>
+                            <a href="school-life.html#transport" class="dropdown-item">Transport Services</a>
+                            <a href="school-life.html#health-services" class="dropdown-item">Health Services</a>
+                            <a href="school-life.html#pastoral-care" class="dropdown-item">Pastoral Care</a>
+                        </div>
+                    </div>
+
+         <!-- News & Events -->
+                    <div class="nav-item dropdown">
+                        <a href="news-events.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">News & Events</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="news-events.html#news-announcements" class="dropdown-item">News & Announcements</a>
+                            <a href="news-events.html#events-calendar" class="dropdown-item">Events & Calendar</a>
+                            <a href="news-events.html#academic-calendar" class="dropdown-item">Academic Calendar</a>
+                        </div>
+                    </div>
+
+            <!-- Gallery -->
+            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+
+            <!-- Contact -->
+            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+        </div>
+
+         <!-- Call to Action -->
+                <a href="admissions.html#how-to-apply" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">
+                    Apply Now <i class="fa fa-arrow-right ms-3"></i>
+                </a>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+
+        <!-- Page Header End -->
+        <!-- <div class="container-xxl py-5 page-header position-relative mb-5">
+            <div class="container py-5">
+                <h1 class="display-2 text-white animated slideInDown mb-4">About Us</h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">About Us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div> -->
+        <!-- Page Header End -->
+
+       
+<!-- Academics Page Content -->
+
+<!-- Page Header Start -->
+<div class="owl-carousel header-carousel container-fluid bg-primary py-5 mb-5 page-header" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/carousel-2.png') center center no-repeat; background-size: cover;">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="display-3 text-white animated slideInDown mb-3">Academics</h1>
+                <p class="fs-5 text-white-50 mb-4">Excellence in education from Early Childhood through Primary School</p>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Academics</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Curriculum Section Start -->
+<section id="curriculum" class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="section-title mb-4">
+                    <h6 class="text-primary text-uppercase mb-2">Learning Framework</h6>
+                    <h1 class="mb-4">Our Curriculum</h1>
+                </div>
+                <p class="mb-4">At Brights Nursery & Primary School, we follow a comprehensive, child-centered curriculum designed to nurture holistic development. Our approach combines the best practices of early childhood education with Uganda's National Curriculum Framework, ensuring students are well-prepared for their educational journey.</p>
+                
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center border-start border-3 border-primary px-3">
+                            <div class="ps-3">
+                                <h4 class="text-primary mb-1">Play-Based</h4>
+                                <p class="mb-0">Early Learning</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center border-start border-3 border-success px-3">
+                            <div class="ps-3">
+                                <h4 class="text-success mb-1">Integrated</h4>
+                                <p class="mb-0">Approach</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion" id="curriculumAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Early Childhood Education (Nursery)
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#curriculumAccordion">
+                            <div class="accordion-body">
+                                <p>Our Nursery curriculum focuses on play-based learning, social development, and foundational skills. Key areas include:</p>
+                                <ul>
+                                    <li>Language and Communication</li>
+                                    <li>Early Mathematics Concepts</li>
+                                    <li>Creative Arts and Expression</li>
+                                    <li>Physical Development</li>
+                                    <li>Social and Emotional Learning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Primary Education (P1-P7)
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#curriculumAccordion">
+                            <div class="accordion-body">
+                                <p>The Primary curriculum builds on foundational skills with structured academic learning. Core subjects include:</p>
+                                <ul>
+                                    <li>English Language and Literature</li>
+                                    <li>Mathematics and Science</li>
+                                    <li>Social Studies</li>
+                                    <li>Local Language (Luganda)</li>
+                                    <li>Religious Education</li>
+                                    <li>Creative Arts and Technology</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bg-light rounded p-5">
+                    <h4 class="mb-4">Curriculum Highlights</h4>
+                    <div class="d-flex mb-4">
+                        <div class="bg-primary rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="fa fa-child text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Child-Centered Approach</h5>
+                            <p class="mb-0">Learning activities tailored to individual needs and developmental stages.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="bg-success rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="fa fa-book text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-success">Competency-Based</h5>
+                            <p class="mb-0">Focus on developing practical skills and real-world application of knowledge.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="bg-warning rounded-circle flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="fa fa-users text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-warning">Holistic Development</h5>
+                            <p class="mb-0">Balancing academic, physical, social, and emotional growth.</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary rounded-pill py-3 px-5 mt-2">Download Curriculum</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Curriculum Section End -->
+
+<!-- Classes & Sections Start -->
+<section id="classes-sections" class="container-xxl py-5 bg-light">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h6 class="text-primary text-uppercase mb-2">Academic Structure</h6>
+            <h1 class="mb-3">Classes & Sections</h1>
+            <p class="mb-4">Our school is organized into age-appropriate classes with small sections for personalized attention</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Nursery Section -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="classes-item shadow-sm">
+                    <div class="bg-primary rounded-top p-4 text-center">
+                        <h3 class="text-white mb-0">Nursery Section</h3>
+                        <p class="text-white-50 mb-0">Ages 2-5 Years</p>
+                    </div>
+                    <div class="bg-white rounded-bottom p-4">
+                        <h5 class="mb-3">Classes Offered:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                <strong>Baby Class:</strong> Ages 2-3 years
+                                <small class="d-block text-muted ms-4">2 Sections (A & B)</small>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                <strong>Middle Class:</strong> Ages 3-4 years
+                                <small class="d-block text-muted ms-4">3 Sections (A, B & C)</small>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa fa-check-circle text-primary me-2"></i>
+                                <strong>Top Class:</strong> Ages 4-5 years
+                                <small class="d-block text-muted ms-4">3 Sections (A, B & C)</small>
+                            </li>
+                        </ul>
+                        <div class="bg-light p-3 rounded">
+                            <small><i class="fa fa-info-circle text-primary me-2"></i> Maximum 25 students per section</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lower Primary -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="classes-item shadow-sm">
+                    <div class="bg-success rounded-top p-4 text-center">
+                        <h3 class="text-white mb-0">Lower Primary</h3>
+                        <p class="text-white-50 mb-0">Primary 1-3</p>
+                    </div>
+                    <div class="bg-white rounded-bottom p-4">
+                        <h5 class="mb-3">Classes & Sections:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="fa fa-check-circle text-success me-2"></i>
+                                <strong>Primary One (P1):</strong> Age 6-7 years
+                                <small class="d-block text-muted ms-4">4 Sections (A, B, C & D)</small>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa fa-check-circle text-success me-2"></i>
+                                <strong>Primary Two (P2):</strong> Age 7-8 years
+                                <small class="d-block text-muted ms-4">3 Sections (A, B & C)</small>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa fa-check-circle text-success me-2"></i>
+                                <strong>Primary Three (P3):</strong> Age 8-9 years
+                                <small class="d-block text-muted ms-4">3 Sections (A, B & C)</small>
+                            </li>
+                        </ul>
+                        <div class="bg-light p-3 rounded">
+                            <small><i class="fa fa-info-circle text-success me-2"></i> Class teacher system with subject specialists</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upper Primary -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="classes-item shadow-sm">
+                    <div class="bg-warning rounded-top p-4 text-center">
+                        <h3 class="text-white mb-0">Upper Primary</h3>
+                        <p class="text-white-50 mb-0">Primary 4-7</p>
+                    </div>
+                    <div class="bg-white rounded-bottom p-4">
+                        <h5 class="mb-3">Classes & Sections:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="fa fa-check-circle text-warning me-2"></i>
+                                <strong>Primary Four (P4):</strong> Age 9-10 years
+                                <small class="d-block text-muted ms-4">3 Sections (A, B & C)</small>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa fa-check-circle text-warning me-2"></i>
+                                <strong>Primary Five (P5):</strong> Age 10-11 years
+                                <small class="d-block text-muted ms-4">3 Sections (A, B & C)</small>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa fa-check-circle text-warning me-2"></i>
+                                <strong>Primary Six (P6):</strong> Age 11-12 years
+                                <small class="d-block text-muted ms-4">2 Sections (A & B)</small>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fa fa-check-circle text-warning me-2"></i>
+                                <strong>Primary Seven (P7):</strong> Age 12-13 years
+                                <small class="d-block text-muted ms-4">2 Sections (A & B)</small>
+                            </li>
+                        </ul>
+                        <div class="bg-light p-3 rounded">
+                            <small><i class="fa fa-info-circle text-warning me-2"></i> Preparation for Primary Leaving Examinations</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Class Schedule -->
+        <div class="mt-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="bg-white rounded shadow-sm p-5">
+                <h4 class="text-center mb-4">Daily Schedule</h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="bg-primary text-white">
+                            <tr>
+                                <th>Time</th>
+                                <th>Nursery Section</th>
+                                <th>Primary Section</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="bg-light">7:30 AM - 8:00 AM</td>
+                                <td>Arrival & Free Play</td>
+                                <td>Morning Assembly & Prep</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">8:00 AM - 10:00 AM</td>
+                                <td>First Learning Session</td>
+                                <td>Core Subjects (Math/English)</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">10:00 AM - 10:30 AM</td>
+                                <td>Snack Break</td>
+                                <td>Short Break</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">10:30 AM - 12:30 PM</td>
+                                <td>Second Learning Session</td>
+                                <td>Subject Specialties</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">12:30 PM - 1:30 PM</td>
+                                <td>Lunch & Rest</td>
+                                <td>Lunch Break</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">1:30 PM - 3:00 PM</td>
+                                <td>Afternoon Activities</td>
+                                <td>Afternoon Lessons</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">3:00 PM - 3:30 PM</td>
+                                <td>Story Time & Departure</td>
+                                <td>Extra-curricular/Departure</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Classes & Sections End -->
+
+<!-- Subjects Offered Start -->
+<section id="subjects-offered" class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h6 class="text-primary text-uppercase mb-2">Academic Program</h6>
+            <h1 class="mb-3">Subjects Offered</h1>
+            <p class="mb-4">Comprehensive subject coverage designed to develop well-rounded individuals</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Core Subjects -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <h4 class="mb-0">Core Subjects</h4>
+                        <p class="mb-0">All Primary Levels (P1-P7)</p>
+                    </div>
+                    <div class="card-body p-4">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2 d-flex align-items-center">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                    <i class="fa fa-book text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">English Language</h6>
+                                    <small class="text-muted">Reading, Writing, Comprehension</small>
+                                </div>
+                            </li>
+                            <li class="mb-2 d-flex align-items-center">
+                                <div class="bg-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                    <i class="fa fa-calculator text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Mathematics</h6>
+                                    <small class="text-muted">Numbers, Arithmetic, Problem Solving</small>
+                                </div>
+                            </li>
+                            <li class="mb-2 d-flex align-items-center">
+                                <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                    <i class="fa fa-flask text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Science</h6>
+                                    <small class="text-muted">Basic Science & Health Education</small>
+                                </div>
+                            </li>
+                            <li class="mb-2 d-flex align-items-center">
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                    <i class="fa fa-globe-africa text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Social Studies</h6>
+                                    <small class="text-muted">History, Geography, Civics</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Languages -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header bg-success text-white text-center py-4">
+                        <h4 class="mb-0">Languages</h4>
+                        <p class="mb-0">Communication & Culture</p>
+                    </div>
+                    <div class="card-body p-4">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2 d-flex align-items-center">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                    <i class="fa fa-language text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">English (Official Language)</h6>
+                                    <small class="text-muted">Primary medium of instruction</small>
+                                </div>
+                            </li>
+                            <li class="mb-2 d-flex align-items-center">
+                                <div class="bg-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                    <i class="fa fa-comments text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Luganda (Local Language)</h6>
+                                    <small class="text-muted">Cultural preservation & communication</small>
+                                </div>
+                            </li>
+                            <li class="mb-2 d-flex align-items-center">
+                                <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                    <i class="fa fa-heart text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Literacy Hour</h6>
+                                    <small class="text-muted">Reading promotion & library sessions</small>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mt-4 bg-light p-3 rounded">
+                            <h6>Language Development Focus:</h6>
+                            <small>• Speaking & Listening Skills<br>• Reading Comprehension<br>• Creative Writing<br>• Public Speaking</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Creative & Technical -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-header bg-warning text-white text-center py-4">
+                        <h4 class="mb-0">Creative & Technical</h4>
+                        <p class="mb-0">Skills Development</p>
+                    </div>
+                    <div class="card-body p-4">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2 d-flex align-items-center">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                    <i class="fa fa-paint-brush text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Art & Craft</h6>
+                                    <small class="text-muted">Drawing, Painting, Handicrafts</small>
+                                </div>
+                            </li>
+                            <li class="mb-2 d-flex align-items-center">
+                                <div class="bg-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                    <i class="fa fa-music text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Music, Dance & Drama</h6>
+                                    <small class="text-muted">Cultural performances & talent development</small>
+                                </div>
+                            </li>
+                            <li class="mb-2 d-flex align-items-center">
+                                <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                    <i class="fa fa-cogs text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Technology Education</h6>
+                                    <small class="text-muted">Basic computer skills (P4-P7)</small>
+                                </div>
+                            </li>
+                            <li class="mb-2 d-flex align-items-center">
+                                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 30px; height: 30px;">
+                                    <i class="fa fa-utensils text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Home Economics</h6>
+                                    <small class="text-muted">Basic cooking & home management</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Special Programs -->
+        <div class="row mt-5">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-light rounded p-5">
+                    <h4 class="text-center mb-4">Special Academic Programs</h4>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="text-center p-3">
+                                <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                                    <i class="fa fa-star text-white fa-2x"></i>
+                                </div>
+                                <h5>Remedial Classes</h5>
+                                <p class="mb-0">Extra support for students needing additional help in core subjects</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-3">
+                                <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                                    <i class="fa fa-rocket text-white fa-2x"></i>
+                                </div>
+                                <h5>Enrichment Program</h5>
+                                <p class="mb-0">Advanced learning for gifted and talented students</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-3">
+                                <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                                    <i class="fa fa-book-reader text-white fa-2x"></i>
+                                </div>
+                                <h5>Reading Program</h5>
+                                <p class="mb-0">Daily reading sessions and library activities to promote literacy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Assessment Information -->
+        <div class="row mt-5">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h4 class="mb-0">Assessment & Evaluation</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <h6><i class="fa fa-clipboard-check text-primary me-2"></i>Continuous Assessment</h6>
+                                <small class="text-muted">Weekly tests, class exercises, and project work</small>
+                            </div>
+                            <div class="col-md-4">
+                                <h6><i class="fa fa-calendar-alt text-success me-2"></i>Termly Examinations</h6>
+                                <small class="text-muted">Formal exams at the end of each term (3 per year)</small>
+                            </div>
+                            <div class="col-md-4">
+                                <h6><i class="fa fa-chart-line text-warning me-2"></i>Progress Reports</h6>
+                                <small class="text-muted">Detailed report cards issued after each term</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Subjects Offered End -->
+
+<!-- Academic Support CTA -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="bg-primary rounded">
+            <div class="row g-0">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="min-height: 300px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded-start" src="img/news-parents.png" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="h-100 d-flex flex-column justify-content-center p-5">
+                        <h1 class="text-white mb-4">Academic Support Services</h1>
+                        <p class="text-white-50 mb-4">
+                            We provide additional academic support through tutoring, homework clubs, and parent-teacher consultations to ensure every student succeeds.
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <a class="btn btn-light rounded-pill py-3 px-5" href="contact.html">Schedule Consultation</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a class="btn btn-outline-light rounded-pill py-3 px-5" href="requirements.html">View Requirements</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Get In Touch</h3>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Kampala Road, Kampala, Uganda</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+256 700 123 456</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@schoolname.ug</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <!-- Navigation Links -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Quick Links</h3>
+                <a class="btn btn-link text-white-50" href="#">Home</a>
+                <a class="btn btn-link text-white-50" href="#">About Us</a>
+                <a class="btn btn-link text-white-50" href="#">Classes</a>
+                <a class="btn btn-link text-white-50" href="#">Teachers</a>
+                <a class="btn btn-link text-white-50" href="#">Contact Us</a>
+            </div>
+            <!-- Photo Gallery -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Photo Gallery</h3>
+                <div class="row g-2 pt-2">
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-2.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-3.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-4.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-5.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-6.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Location / Map -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Our Location</h3>
+                <iframe class="w-100 rounded" height="200" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.000000!2d32.583333!3d0.316667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db00!2sKampala%20Road!5e0!3m2!1sen!2sug!4v1600000000000!5m2!1sen!2sug" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Brights Nursery and Primary School</a>, All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

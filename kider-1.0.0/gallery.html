@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Brights - Preschool Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+<style>
+       .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-title {
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .gallery-category {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .filter-btn {
+            border: 1px solid #dee2e6;
+            background: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--bs-dark);
+            transition: all 0.3s;
+        }
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bs-primary);
+            color: white;
+            border-color: var(--bs-primary);
+        }
+        .gallery-video {
+            position: relative;
+        }
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255,255,255,0.9);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bs-primary);
+            font-size: 24px;
+            transition: all 0.3s;
+        }
+        .play-btn:hover {
+            background: var(--bs-primary);
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .gallery-item img {
+                height: 220px;
+            }
+        }
+</style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 text-primary">
+                    <i class="fa fa-book-reader me-3"></i>Brights
+                </h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+
+                    <!-- Home -->
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+
+                    <!-- About Us -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="about.html#about-school" class="dropdown-item">About the School</a>
+                            <a href="about.html#vision-mission" class="dropdown-item">Vision & Mission</a>
+                            <a href="about.html#our-history" class="dropdown-item">Our History</a>
+                            <a href="about.html#administration" class="dropdown-item">Administration</a>
+                            <a href="about.html#school-staff" class="dropdown-item">School Staff</a>
+                            <a href="about.html#rules-regulations" class="dropdown-item">Rules & Regulations</a>
+                        </div>
+                    </div>
+
+                    <!-- Academics -->
+                    <div class="nav-item dropdown">
+                        <a href="academics.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="academics.html#curriculum" class="dropdown-item">Curriculum</a>
+                            <a href="academics.html#classes-sections" class="dropdown-item">Classes & Sections</a>
+                            <a href="academics.html#subjects-offered" class="dropdown-item">Subjects Offered</a>
+                        </div>
+                    </div>
+
+                    <!-- Admissions -->
+                    <div class="nav-item dropdown">
+                        <a href="admissions.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admissions</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="admissions.html#requirements" class="dropdown-item">Requirements</a>
+                            <a href="admissions.html#fees-structure" class="dropdown-item">Fees Structure</a>
+                            <a href="admissions.html#how-to-apply" class="dropdown-item">How to Apply</a>
+                            <a href="admissions.html#school-uniform" class="dropdown-item">School Uniform</a>
+                        </div>
+                    </div>
+
+                    <!-- School Life -->
+                    <div class="nav-item dropdown">
+                        <a href="school-life.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">School Life</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="school-life.html#school-menu" class="dropdown-item">School Menu</a>
+                            <a href="school-life.html#student-leadership" class="dropdown-item">Student Leadership</a>
+                            <a href="school-life.html#co-curricular" class="dropdown-item">Co-curricular Activities</a>
+                            <a href="school-life.html#transport" class="dropdown-item">Transport Services</a>
+                            <a href="school-life.html#health-services" class="dropdown-item">Health Services</a>
+                            <a href="school-life.html#pastoral-care" class="dropdown-item">Pastoral Care</a>
+                        </div>
+                    </div>
+
+                    <!-- News & Events -->
+                    <div class="nav-item dropdown">
+                        <a href="news-events.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">News & Events</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="news-events.html#news-announcements" class="dropdown-item">News & Announcements</a>
+                            <a href="news-events.html#events-calendar" class="dropdown-item">Events & Calendar</a>
+                            <a href="news-events.html#academic-calendar" class="dropdown-item">Academic Calendar</a>
+                        </div>
+                    </div>
+
+                    <!-- Gallery -->
+                    <a href="gallery.html" class="nav-item nav-link active">Gallery</a>
+
+                    <!-- Contact -->
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+
+                <!-- Call to Action -->
+                <a href="admissions.html#how-to-apply" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">
+                    Apply Now <i class="fa fa-arrow-right ms-3"></i>
+                </a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+
+ <!-- Page Header Start -->
+        <div class="owl-carousel header-carousel container-fluid bg-primary py-5 mb-5 page-header" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/gallery-banner.png') center center no-repeat; background-size: cover;">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h1 class="display-3 text-white animated slideInDown mb-3">Our Gallery</h1>
+                        <p class="fs-5 text-white-50 mb-4">Moments captured from the vibrant life at Brights Nursery & Primary School</p>
+                        <nav aria-label="breadcrumb animated slideInDown">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">Gallery</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+<!-- Gallery Section Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h6 class="text-primary text-uppercase mb-2">Our Memories</h6>
+                    <h1 class="mb-3">School Gallery</h1>
+                    <p class="mb-4">Browse through our collection of photos and videos showcasing the wonderful moments, events, and facilities at Brights.</p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="row mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-12 text-center">
+                        <button class="filter-btn active" data-filter="*">All</button>
+                        <button class="filter-btn" data-filter=".facilities">Facilities</button>
+                        <button class="filter-btn" data-filter=".events">Events</button>
+                        <button class="filter-btn" data-filter=".sports">Sports</button>
+                        <button class="filter-btn" data-filter=".classroom">Classroom</button>
+                        <button class="filter-btn" data-filter=".cultural">Cultural</button>
+                        <button class="filter-btn" data-filter=".videos">Videos</button>
+                    </div>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="row g-4 gallery-grid">
+                    <!-- Item 1 - Facilities -->
+                    <div class="col-lg-4 col-md-6 gallery-item-box facilities wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="gallery-item">
+                            <img src="img/gallery-banner.png" alt="School Library">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">School Library</h5>
+                                    <p class="gallery-category text-white-50">Facilities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 - Events -->
+                    <div class="col-lg-4 col-md-6 gallery-item-box events wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="gallery-item">
+                            <img src="img/gallery-event-1.png" alt="Graduation Day">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">Nursery Graduation</h5>
+                                    <p class="gallery-category text-white-50">Events</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 - Sports -->
+                    <div class="col-lg-4 col-md-6 gallery-item-box sports wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="gallery-item">
+                            <img src="img/activity-sports.png" alt="Sports Day">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">Annual Sports Day</h5>
+                                    <p class="gallery-category text-white-50">Sports</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 - Classroom -->
+                    <!-- <div class="col-lg-4 col-md-6 gallery-item-box classroom wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="gallery-item">
+                            <img src="img/gallery-classroom-1.jpg" alt="Interactive Learning">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">Interactive Learning</h5>
+                                    <p class="gallery-category text-white-50">Classroom</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Item 5 - Cultural -->
+                    <!-- <div class="col-lg-4 col-md-6 gallery-item-box cultural wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="gallery-item">
+                            <img src="img/activity-music.png" alt="Cultural Day">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">Cultural Day Celebrations</h5>
+                                    <p class="gallery-category text-white-50">Cultural</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Item 6 - Facilities -->
+                    <div class="col-lg-4 col-md-6 gallery-item-box facilities wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="gallery-item">
+                            <img src="img/news-science.png" alt="Science Lab">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">Science Laboratory</h5>
+                                    <p class="gallery-category text-white-50">Facilities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 7 - Events -->
+                    <div class="col-lg-4 col-md-6 gallery-item-box events wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="gallery-item">
+                            <img src="img/news-parents.png" alt="Parent-Teacher Meeting">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">Parent-Teacher Conference</h5>
+                                    <p class="gallery-category text-white-50">Events</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 8 - Sports -->
+                    <div class="col-lg-4 col-md-6 gallery-item-box sports wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="gallery-item">
+                            <img src="img/swimming-uniform.png" alt="Swimming">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">Swimming Lessons</h5>
+                                    <p class="gallery-category text-white-50">Sports</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 9 - Video -->
+                    <!-- <div class="col-lg-4 col-md-6 gallery-item-box videos wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="gallery-item gallery-video">
+                            <img src="img/gallery-video-1.jpg" alt="School Tour Video">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">School Tour 2026</h5>
+                                    <p class="gallery-category text-white-50">Videos</p>
+                                </div>
+                            </div>
+                            <a href="#" class="play-btn" data-bs-toggle="modal" data-bs-target="#videoModal">
+                                <i class="fa fa-play"></i>
+                            </a>
+                        </div>
+                    </div> -->
+                    <!-- Item 10 - Cultural -->
+                    <!-- <div class="col-lg-4 col-md-6 gallery-item-box cultural wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="gallery-item">
+                            <img src="img/gallery-cultural-2.jpg" alt="Traditional Dance">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">Traditional Dance</h5>
+                                    <p class="gallery-category text-white-50">Cultural</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Item 11 - Classroom -->
+                    <div class="col-lg-4 col-md-6 gallery-item-box classroom wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="gallery-item">
+                            <img src="img/activity-art.png" alt="Art Class">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">Art & Creativity</h5>
+                                    <p class="gallery-category text-white-50">Classroom</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 12 - Facilities -->
+                    <!-- <div class="col-lg-4 col-md-6 gallery-item-box facilities wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="gallery-item">
+                            <img src="img/gallery-facility-3.jpg" alt="Playground">
+                            <div class="gallery-overlay">
+                                <div>
+                                    <h5 class="gallery-title text-white">Outdoor Play Area</h5>
+                                    <p class="gallery-category text-white-50">Facilities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- Load More Button -->
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                        <a href="#" class="btn btn-primary rounded-pill py-3 px-5">Load More <i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Gallery Section End -->
+
+
+ <!-- Video Modal -->
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalLabel">School Tour 2026</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="School Tour Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action - Visit Us -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="bg-primary rounded">
+                    <div class="row g-0">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="min-height: 300px;">
+                            <div class="position-relative h-100">
+                                <img class="position-absolute w-100 h-100 rounded-start" src="img/visit-us.png" style="object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="h-100 d-flex flex-column justify-content-center p-5">
+                                <h1 class="text-white mb-4">Experience Brights in Person</h1>
+                                <p class="text-white-50 mb-4">
+                                    We invite you to visit our campus and see our facilities firsthand. Schedule a tour and meet our dedicated staff.
+                                </p>
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <a href="contact.html" class="btn btn-light rounded-pill py-3 px-5 w-100">
+                                            <i class="fa fa-calendar me-2"></i> Book a Tour
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="admissions.html" class="btn btn-outline-light rounded-pill py-3 px-5 w-100">
+                                            <i class="fa fa-file-alt me-2"></i> Apply Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Get In Touch</h3>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Kampala Road, Kampala, Uganda</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+256 700 123 456</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@schoolname.ug</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <!-- Navigation Links -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Quick Links</h3>
+                <a class="btn btn-link text-white-50" href="#">Home</a>
+                <a class="btn btn-link text-white-50" href="#">About Us</a>
+                <a class="btn btn-link text-white-50" href="#">Classes</a>
+                <a class="btn btn-link text-white-50" href="#">Teachers</a>
+                <a class="btn btn-link text-white-50" href="#">Contact Us</a>
+            </div>
+            <!-- Photo Gallery -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Photo Gallery</h3>
+                <div class="row g-2 pt-2">
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-2.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-3.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-4.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-5.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-6.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Location / Map -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Our Location</h3>
+                <iframe class="w-100 rounded" height="200" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.000000!2d32.583333!3d0.316667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db00!2sKampala%20Road!5e0!3m2!1sen!2sug!4v1600000000000!5m2!1sen!2sug" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Brights Nursery and Primary School</a>, All Rights Reserved.
+                </div>
+             
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

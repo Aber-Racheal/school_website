@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kider - Preschool Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+       <style>
+        .fee-card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .fee-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+        }
+        
+        .fee-card-header {
+            border-bottom: none;
+            padding: 1.5rem;
+        }
+        
+        .uniform-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .uniform-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .uniform-img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .badge-popular {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, #FF9800, #FF5722);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        
+        .payment-method {
+            border-left: 4px solid var(--bs-primary);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .timeline-step {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-step:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--bs-primary);
+        }
+        
+        .timeline-step:after {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 25px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background: #dee2e6;
+        }
+        
+        .timeline-step:last-child:after {
+            display: none;
+        }
+        
+        .requirement-item {
+            border-left: 3px solid var(--bs-primary);
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .uniform-img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 text-primary">
+                    <i class="fa fa-book-reader me-3"></i>Brights
+                </h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+
+                    <!-- Home -->
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+
+                    <!-- About Us -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="about.html#about-school" class="dropdown-item">About the School</a>
+                            <a href="about.html#vision-mission" class="dropdown-item">Vision & Mission</a>
+                            <a href="about.html#our-history" class="dropdown-item">Our History</a>
+                            <a href="about.html#administration" class="dropdown-item">Administration</a>
+                            <a href="about.html#school-staff" class="dropdown-item">School Staff</a>
+                            <a href="about.html#rules-regulations" class="dropdown-item">Rules & Regulations</a>
+                        </div>
+                    </div>
+
+                    <!-- Academics -->
+                    <div class="nav-item dropdown">
+                        <a href="academics.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="academics.html#curriculum" class="dropdown-item">Curriculum</a>
+                            <a href="academics.html#classes-sections" class="dropdown-item">Classes & Sections</a>
+                            <a href="academics.html#subjects-offered" class="dropdown-item">Subjects Offered</a>
+                        </div>
+                    </div>
+
+                    <!-- Admissions -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Admissions</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="#requirements" class="dropdown-item">Requirements</a>
+                            <a href="#fees-structure" class="dropdown-item">Fees Structure</a>
+                            <a href="#how-to-apply" class="dropdown-item">How to Apply</a>
+                            <a href="#school-uniform" class="dropdown-item">School Uniform</a>
+                        </div>
+                    </div>
+
+                        <!-- School Life -->
+                    <div class="nav-item dropdown">
+                        <a href="school-life.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">School Life</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="school-life.html#school-menu" class="dropdown-item">School Menu</a>
+                            <a href="school-life.html#student-leadership" class="dropdown-item">Student Leadership</a>
+                            <a href="school-life.html#co-curricular" class="dropdown-item">Co-curricular Activities</a>
+                            <a href="school-life.html#transport" class="dropdown-item">Transport Services</a>
+                            <a href="school-life.html#health-services" class="dropdown-item">Health Services</a>
+                            <a href="school-life.html#pastoral-care" class="dropdown-item">Pastoral Care</a>
+                        </div>
+                    </div>
+
+                  <!-- News & Events -->
+                    <div class="nav-item dropdown">
+                        <a href="news-events.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">News & Events</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="news-events.html#news-announcements" class="dropdown-item">News & Announcements</a>
+                            <a href="news-events.html#events-calendar" class="dropdown-item">Events & Calendar</a>
+                            <a href="news-events.html#academic-calendar" class="dropdown-item">Academic Calendar</a>
+                        </div>
+                    </div>
+
+                    <!-- Gallery -->
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+
+                    <!-- Contact -->
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+
+                <!-- Call to Action -->
+                <a href="#how-to-apply" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">
+                    Apply Now <i class="fa fa-arrow-right ms-3"></i>
+                </a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+
+        <!-- Page Header Start -->
+        <div class="owl-carousel header-carousel container-fluid bg-primary py-5 mb-5 page-header" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/admissions-banner.png') center center no-repeat; background-size: cover;">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h1 class="display-3 text-white animated slideInDown mb-3">Admissions</h1>
+                        <p class="fs-5 text-white-50 mb-4">Join our community of lifelong learners. Admissions open for 2026 academic year.</p>
+                        <nav aria-label="breadcrumb animated slideInDown">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">Admissions</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+            <!-- Requirements Section Start -->
+        <section id="requirements" class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="section-title mb-4">
+                            <h6 class="text-primary text-uppercase mb-2">Getting Started</h6>
+                            <h1 class="mb-4">Admission Requirements</h1>
+                        </div>
+                        <p class="mb-4">We welcome applications from children who meet our age requirements and are ready to embark on their educational journey. Below are the documents and prerequisites needed for admission.</p>
+                        
+                        <div class="bg-light rounded p-4">
+                            <h5 class="mb-3">Age Requirements by Class:</h5>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="bg-white rounded p-3 text-center">
+                                        <h6 class="text-primary mb-1">Baby Class</h6>
+                                        <p class="mb-0">2 - 3 Years</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-white rounded p-3 text-center">
+                                        <h6 class="text-success mb-1">Middle Class</h6>
+                                        <p class="mb-0">3 - 4 Years</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-white rounded p-3 text-center">
+                                        <h6 class="text-warning mb-1">Top Class</h6>
+                                        <p class="mb-0">4 - 5 Years</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-white rounded p-3 text-center">
+                                        <h6 class="text-info mb-1">Primary One</h6>
+                                        <p class="mb-0">5 - 6 Years</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="bg-white rounded shadow-sm p-5">
+                            <h4 class="mb-4">Required Documents</h4>
+                            
+                            <div class="requirement-item">
+                                <h6 class="text-primary mb-2">1. Birth Certificate</h6>
+                                <p class="mb-0">Original and 3 photocopies of child's birth certificate or passport</p>
+                            </div>
+                            
+                            <div class="requirement-item" style="border-color: var(--bs-success);">
+                                <h6 class="text-success mb-2">2. Passport Photos</h6>
+                                <p class="mb-0">6 recent passport-size photographs of the child (white background)</p>
+                            </div>
+                            
+                            <div class="requirement-item" style="border-color: var(--bs-warning);">
+                                <h6 class="text-warning mb-2">3. Previous School Report</h6>
+                                <p class="mb-0">For transfers: Progress report from previous school (Primary only)</p>
+                            </div>
+                            
+                            <div class="requirement-item" style="border-color: var(--bs-info);">
+                                <h6 class="text-info mb-2">4. Immunization Records</h6>
+                                <p class="mb-0">Complete immunization card (photocopy and original for verification)</p>
+                            </div>
+                            
+                            <div class="requirement-item" style="border-color: #6f42c1;">
+                                <h6 class="text-purple mb-2">5. Parent/Guardian ID</h6>
+                                <p class="mb-0">Copy of parent/guardian National ID or passport</p>
+                            </div>
+                            
+                            <div class="alert alert-info mt-4">
+                                <i class="fa fa-info-circle me-2"></i>
+                                <strong>Note:</strong> All documents must be submitted in person during the registration period. Late applications may be considered based on availability.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Requirements Section End -->
+
+        <!-- Fees Structure Start -->
+        <section id="fees-structure" class="container-xxl py-5 bg-light">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h6 class="text-primary text-uppercase mb-2">Financial Information</h6>
+                    <h1 class="mb-3">Fees Structure 2026</h1>
+                    <p class="mb-4">Transparent and competitive fee structure for Term 1, 2026 academic year</p>
+                </div>
+                
+                <div class="row g-4 mb-5">
+                    <!-- Nursery Fees -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="fee-card card border-0 shadow-sm h-100">
+                            <div class="fee-card-header bg-primary text-white">
+                                <h4 class="text-center mb-0">Nursery Section</h4>
+                                <p class="text-center text-white-50 mb-0">Ages 2-5 Years</p>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <h2 class="text-primary">UGX 450,000</h2>
+                                    <p class="text-muted">Per Term</p>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Tuition Fees</li>
+                                    <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Learning Materials</li>
+                                    <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Co-curricular Activities</li>
+                                    <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Health Services</li>
+                                    <li class="mb-2"><i class="fa fa-times text-muted me-2"></i> Lunch & Snacks (Optional)</li>
+                                </ul>
+                                <div class="text-center">
+                                    <small class="text-muted">* Registration Fee: UGX 50,000 (One-time)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Primary Fees -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="fee-card card border-0 shadow-sm h-100">
+                            <div class="position-relative">
+                                <span class="badge-popular">Most Popular</span>
+                            </div>
+                            <div class="fee-card-header bg-success text-white">
+                                <h4 class="text-center mb-0">Primary Section</h4>
+                                <p class="text-center text-white-50 mb-0">P1 - P7</p>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <h2 class="text-success">UGX 550,000</h2>
+                                    <p class="text-muted">Per Term</p>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Tuition Fees</li>
+                                    <li class="mb-2"><i class="fa fa-check text-success me-2"></i> All Textbooks</li>
+                                    <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Examination Fees</li>
+                                    <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Sports & Clubs</li>
+                                    <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Health Services</li>
+                                </ul>
+                                <div class="text-center">
+                                    <small class="text-muted">* Registration Fee: UGX 50,000 (One-time)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Services -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="fee-card card border-0 shadow-sm h-100">
+                            <div class="fee-card-header bg-warning text-white">
+                                <h4 class="text-center mb-0">Additional Services</h4>
+                                <p class="text-center text-white-50 mb-0">Optional Facilities</p>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="text-center mb-4">
+                                    <h5 class="text-warning">Optional Fees</h5>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-3">
+                                        <h6 class="mb-1">School Transport</h6>
+                                        <p class="mb-0 text-muted">UGX 150,000 per term (within Kampala)</p>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h6 class="mb-1">Lunch & Snacks</h6>
+                                        <p class="mb-0 text-muted">UGX 100,000 per term</p>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h6 class="mb-1">Boarding Facility</h6>
+                                        <p class="mb-0 text-muted">UGX 800,000 per term (P4-P7 only)</p>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h6 class="mb-1">Swimming Lessons</h6>
+                                        <p class="mb-0 text-muted">UGX 50,000 per term</p>
+                                    </li>
+                                </ul>
+                                <div class="text-center">
+                                    <small class="text-muted">* All additional services are optional</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Payment Methods -->
+                <div class="row g-4">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="bg-white rounded shadow-sm p-5">
+                            <h4 class="text-center mb-4">Payment Methods & Bank Details</h4>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="payment-method">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                                <i class="fa fa-university text-white fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="mb-0">Bank Transfer</h5>
+                                            </div>
+                                        </div>
+                                        <p class="mb-2"><strong>Bank:</strong> Stanbic Bank Uganda</p>
+                                        <p class="mb-2"><strong>Account Name:</strong> Brights Nursery & Primary School</p>
+                                        <p class="mb-2"><strong>Account Number:</strong> 9030005796987</p>
+                                        <p class="mb-0"><strong>Branch:</strong> Kampala Road</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="payment-method" style="border-color: var(--bs-success);">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="bg-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                                <i class="fa fa-mobile-alt text-white fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="mb-0">Mobile Money</h5>
+                                            </div>
+                                        </div>
+                                        <p class="mb-2"><strong>MTN Mobile Money:</strong> 0772 123 456</p>
+                                        <p class="mb-2"><strong>Airtel Money:</strong> 0752 123 456</p>
+                                        <p class="mb-0"><strong>Reference:</strong> Student Name + Class</p>
+                                        <small class="text-muted">Please send payment confirmation to accounts@brights.ug</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="payment-method" style="border-color: var(--bs-warning);">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                                <i class="fa fa-money-bill-alt text-white fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="mb-0">Cash Payment</h5>
+                                            </div>
+                                        </div>
+                                        <p class="mb-2"><strong>Location:</strong> School Accounts Office</p>
+                                        <p class="mb-2"><strong>Hours:</strong> 8:00 AM - 4:00 PM (Mon-Fri)</p>
+                                        <p class="mb-0"><strong>Receipt:</strong> Official receipt issued immediately</p>
+                                        <small class="text-muted">Please bring exact amount or small denominations</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-warning mt-4">
+                                <i class="fa fa-exclamation-triangle me-2"></i>
+                                <strong>Important:</strong> All fees must be paid in full by the first day of each term. Late payments attract a 5% penalty fee. School fees are non-refundable.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fees Structure End -->
+
+        
+        <!-- How to Apply Start -->
+        <section id="how-to-apply" class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h6 class="text-primary text-uppercase mb-2">Application Process</h6>
+                    <h1 class="mb-3">How to Apply</h1>
+                    <p class="mb-4">Follow these simple steps to secure your child's place at Brights Nursery & Primary School</p>
+                </div>
+                
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="timeline-container">
+                            <div class="timeline-step">
+                                <h5>Step 1: Inquiry & Visit</h5>
+                                <p class="mb-0">Contact our admissions office or schedule a school tour. Visit our campus to see our facilities and meet our staff.</p>
+                            </div>
+                            
+                            <div class="timeline-step">
+                                <h5>Step 2: Collect Application Form</h5>
+                                <p class="mb-0">Obtain the application form from the school office or download it from our website. Complete all sections accurately.</p>
+                            </div>
+                            
+                            <div class="timeline-step">
+                                <h5>Step 3: Submit Documents</h5>
+                                <p class="mb-0">Submit the completed form along with all required documents (birth certificate, photos, immunization records, etc.).</p>
+                            </div>
+                            
+                            <div class="timeline-step">
+                                <h5>Step 4: Assessment & Interview</h5>
+                                <p class="mb-0">For Primary applicants, a basic assessment may be conducted. Parent/child interview with the head teacher.</p>
+                            </div>
+                            
+                            <div class="timeline-step">
+                                <h5>Step 5: Admission Decision</h5>
+                                <p class="mb-0">You will receive admission decision within 7 working days. If accepted, you'll receive an admission letter.</p>
+                            </div>
+                            
+                            <div class="timeline-step">
+                                <h5>Step 6: Payment & Registration</h5>
+                                <p class="mb-0">Pay the required fees and complete registration. Collect school uniform and books.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="bg-light rounded p-5 h-100">
+                            <h4 class="mb-4">Important Dates 2026</h4>
+                            
+                            <div class="mb-4">
+                                <h6 class="text-primary">Application Period</h6>
+                                <p class="mb-2">Term 1 Applications: November 1, 2025 - January 15, 2026</p>
+                                <p class="mb-2">Term 2 Applications: March 1 - April 15, 2026</p>
+                                <p class="mb-2">Term 3 Applications: July 1 - August 15, 2026</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h6 class="text-success">School Terms 2026</h6>
+                                <p class="mb-2"><strong>Term 1:</strong> February 3 - May 2, 2026</p>
+                                <p class="mb-2"><strong>Term 2:</strong> May 20 - August 15, 2026</p>
+                                <p class="mb-2"><strong>Term 3:</strong> September 2 - November 28, 2026</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h6 class="text-warning">Admission Tests (Primary Only)</h6>
+                                <p class="mb-2">Primary 1-3: Basic literacy and numeracy assessment</p>
+                                <p class="mb-2">Primary 4-7: English, Mathematics, and Science test</p>
+                                <p class="mb-0">Tests scheduled every Saturday during application period</p>
+                            </div>
+                            
+                            <div class="alert alert-success">
+                                <i class="fa fa-download me-2"></i>
+                                <a href="#" class="text-success fw-bold">Download Application Form</a> (PDF, 250KB)
+                            </div>
+                            
+                            <a href="contact.html" class="btn btn-primary rounded-pill py-3 px-5 w-100">
+                                <i class="fa fa-calendar-alt me-2"></i> Schedule a School Tour
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How to Apply End -->
+
+
+               <!-- School Uniform Start -->
+        <section id="school-uniform" class="container-xxl py-5 bg-light">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h6 class="text-primary text-uppercase mb-2">Dress Code</h6>
+                    <h1 class="mb-3">School Uniform</h1>
+                    <p class="mb-4">Our uniform policy promotes equality, discipline, and school pride. All uniforms are available at the school store.</p>
+                </div>
+                
+                <!-- Daily Wear -->
+                <div class="row mb-5">
+                    <div class="col-lg-12 mb-4">
+                        <h4 class="text-center mb-4">Daily School Wear</h4>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="uniform-card bg-white rounded shadow-sm">
+                            <img src="img/uniform-nursery.png" class="uniform-img" alt="Nursery Uniform">
+                            <div class="p-4">
+                                <h5 class="text-primary">Nursery Section</h5>
+                                <p class="mb-2"><strong>Boys:</strong> Red short-sleeved shirt, grey shorts</p>
+                                <p class="mb-2"><strong>Girls:</strong> Red short-sleeved blouse, grey pinafore</p>
+                                <p class="mb-0"><strong>Footwear:</strong> Black shoes, white socks</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="uniform-card bg-white rounded shadow-sm">
+                            <img src="img/uniform-primary.png" class="uniform-img" alt="Primary Uniform">
+                            <div class="p-4">
+                                <h5 class="text-success">Primary Section</h5>
+                                <p class="mb-2"><strong>Boys:</strong> White shirt, grey trousers, school tie</p>
+                                <p class="mb-2"><strong>Girls:</strong> White blouse, grey skirt, school tie</p>
+                                <p class="mb-0"><strong>Footwear:</strong> Black leather shoes, grey socks</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="uniform-card bg-white rounded shadow-sm">
+                            <img src="img/uniform-prefect.png" class="uniform-img" alt="Prefect Uniform">
+                            <div class="p-4">
+                                <h5 class="text-warning">Prefects & Leaders</h5>
+                                <p class="mb-2"><strong>Distinction:</strong> Blazer with school badge</p>
+                                <p class="mb-2"><strong>Badges:</strong> Leadership position badges</p>
+                                <p class="mb-0"><strong>Special:</strong> Red tie for prefects</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="uniform-card bg-white rounded shadow-sm">
+                            <img src="img/uniform-weekend.png" class="uniform-img" alt="Weekend Wear">
+                            <div class="p-4">
+                                <h5 class="text-info">Weekend/Activity Wear</h5>
+                                <p class="mb-2"><strong>T-shirt:</strong> School-branded polo shirt</p>
+                                <p class="mb-2"><strong>Bottom:</strong> Blue jeans or tracksuit</p>
+                                <p class="mb-0"><strong>Days:</strong> Fridays & special events</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sports & Special Wear -->
+                <div class="row">
+                    <div class="col-lg-12 mb-4">
+                        <h4 class="text-center mb-4">Sports & Special Attire</h4>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="uniform-card bg-white rounded shadow-sm">
+                            <img src="img/sports-uniform.png" class="uniform-img" alt="Sports Uniform">
+                            <div class="p-4">
+                                <h5 class="text-primary">Sports Uniform</h5>
+                                <p class="mb-2"><strong>Top:</strong> White polo shirt with school logo</p>
+                                <p class="mb-2"><strong>Bottom:</strong> Blue shorts (boys), blue skort (girls)</p>
+                                <p class="mb-0"><strong>Days:</strong> PE lessons & sports competitions</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="uniform-card bg-white rounded shadow-sm">
+                            <img src="img/swimming-uniform.png" class="uniform-img" alt="Swimming Uniform">
+                            <div class="p-4">
+                                <h5 class="text-success">Swimming Attire</h5>
+                                <p class="mb-2"><strong>Boys:</strong> Blue swimming trunks</p>
+                                <p class="mb-2"><strong>Girls:</strong> One-piece blue swimsuit</p>
+                                <p class="mb-0"><strong>Required:</strong> Swimming cap & goggles</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="uniform-card bg-white rounded shadow-sm">
+                            <img src="img/boarding-uniform.png" class="uniform-img" alt="Boarding Uniform">
+                            <div class="p-4">
+                                <h5 class="text-warning">Boarding Attire</h5>
+                                <p class="mb-2"><strong>Evening:</strong> School-branded tracksuit</p>
+                                <p class="mb-2"><strong>Night:</strong> School-branded pajamas</p>
+                                <p class="mb-0"><strong>Weekend:</strong> Casual wear (approved colors)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Uniform Guidelines -->
+                <div class="row mt-5">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="bg-white rounded shadow-sm p-5">
+                            <h4 class="text-center mb-4">Uniform Guidelines & Prices</h4>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <h6 class="text-primary">Uniform Rules</h6>
+                                    <ul class="mb-0">
+                                        <li>Uniform must be clean and well-ironed daily</li>
+                                        <li>Hair should be neat and groomed (boys: short, girls: tied)</li>
+                                        <li>No jewelry except small stud earrings for girls</li>
+                                        <li>Nails must be clean and trimmed short</li>
+                                        <li>School badge must be worn at all times</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <h6 class="text-success">Purchase Information</h6>
+                                    <p class="mb-2"><strong>School Store:</strong> Open Monday-Friday, 8:00 AM - 4:00 PM</p>
+                                    <p class="mb-2"><strong>Complete Set Price:</strong> UGX 150,000 - 200,000</p>
+                                    <p class="mb-2"><strong>Payment:</strong> Cash, Mobile Money, or Bank Transfer</p>
+                                    <p class="mb-0"><strong>Tailoring:</strong> Available at school for perfect fit</p>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info mt-4">
+                                <i class="fa fa-tags me-2"></i>
+                                <strong>Uniform Packages Available:</strong> Complete sets (2 uniforms + sports wear) or individual items. Second-hand uniforms available at 50% discount (good condition).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- School Uniform End -->
+
+
+               <!-- Admissions CTA -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="bg-primary rounded">
+                    <div class="row g-0">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="min-height: 300px;">
+                            <div class="position-relative h-100">
+                                <img class="position-absolute w-100 h-100 rounded-start" src="img/admissions-cta.png" style="object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="h-100 d-flex flex-column justify-content-center p-5">
+                                <h1 class="text-white mb-4">Ready to Join Brights?</h1>
+                                <p class="text-white-50 mb-4">
+                                    Take the first step towards quality education for your child. Contact our admissions team today for personalized guidance through the application process.
+                                </p>
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <a href="contact.html" class="btn btn-light rounded-pill py-3 px-5 w-100">
+                                            <i class="fa fa-phone me-2"></i> Contact Us
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="#how-to-apply" class="btn btn-outline-light rounded-pill py-3 px-5 w-100">
+                                            <i class="fa fa-file-alt me-2"></i> Apply Online
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+ <!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Get In Touch</h3>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Kampala Road, Kampala, Uganda</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+256 700 123 456</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@schoolname.ug</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <!-- Navigation Links -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Quick Links</h3>
+                <a class="btn btn-link text-white-50" href="#">Home</a>
+                <a class="btn btn-link text-white-50" href="#">About Us</a>
+                <a class="btn btn-link text-white-50" href="#">Classes</a>
+                <a class="btn btn-link text-white-50" href="#">Teachers</a>
+                <a class="btn btn-link text-white-50" href="#">Contact Us</a>
+            </div>
+            <!-- Photo Gallery -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Photo Gallery</h3>
+                <div class="row g-2 pt-2">
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-1.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-2.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-3.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-4.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-5.png" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="img/classes-6.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Location / Map -->
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Our Location</h3>
+                <iframe class="w-100 rounded" height="200" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.000000!2d32.583333!3d0.316667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db00!2sKampala%20Road!5e0!3m2!1sen!2sug!4v1600000000000!5m2!1sen!2sug" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Brights Nursery and Primary School</a>, All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
