@@ -281,7 +281,7 @@
                             <p class="mb-4">Have a question or need assistance? Fill out the form below and our team will get back to you within 24 hours.</p>
                         </div>
                         
-                        <form>
+                        <form id="contactForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -335,6 +335,24 @@
         </div>
         <!-- Contact Form & Map End -->
 
+        <!-- Contact Success Modal -->
+<div class="modal fade" id="contactSuccessModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
+        <h4 class="text-success mb-3">Message Sent Successfully 🎉</h4>
+        <p>
+          Thank you for contacting <strong>Brights Nursery & Primary School</strong>.
+        </p>
+        <p>Our team will get back to you within 24 hours.</p>
+        <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
          <!-- FAQ Section Start -->
         <div class="container-xxl py-5">
@@ -345,40 +363,103 @@
                     <p class="mb-4">Find quick answers to common questions about admissions, academics, and school life.</p>
                 </div>
                 
-                <div class="row g-4">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="faq-item">
-                            <h5><i class="fa fa-question-circle text-primary me-2"></i> What are the admission requirements?</h5>
-                            <p class="mb-0">Admission requires a completed application form, birth certificate, passport photos, and immunization records. For transfers, previous school reports are needed. Visit our Admissions page for full details.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h5><i class="fa fa-question-circle text-primary me-2"></i> What is the school fees structure?</h5>
-                            <p class="mb-0">Nursery section is UGX 450,000 per term, Primary section is UGX 550,000 per term. Additional services like transport and lunch are optional. Full fee structure is on the Admissions page.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h5><i class="fa fa-question-circle text-primary me-2"></i> Do you offer scholarships?</h5>
-                            <p class="mb-0">Yes, we offer merit-based and need-based scholarships for outstanding students. Please contact our admissions office for more information.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="faq-item">
-                            <h5><i class="fa fa-question-circle text-primary me-2"></i> What are the school hours?</h5>
-                            <p class="mb-0">School starts at 7:30 AM and ends at 3:30 PM. Aftercare is available until 5:00 PM for working parents at an additional cost.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h5><i class="fa fa-question-circle text-primary me-2"></i> Do you provide school transport?</h5>
-                            <p class="mb-0">Yes, we have a fleet of school buses covering major routes in Kampala and surrounding areas. Fees range from UGX 150,000 to 200,000 per term.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h5><i class="fa fa-question-circle text-primary me-2"></i> Can I schedule a school tour?</h5>
-                            <p class="mb-0">Absolutely! We encourage parents to visit and see our facilities. Please contact our admissions office to book a tour.</p>
-                        </div>
+               <div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="accordion" id="faqAccordion">
+
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        What are the admission requirements?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Admission requires a completed application form, birth certificate, passport photos, and immunization records. 
+                        For transfers, previous school reports are needed.
                     </div>
                 </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        What is the school fees structure?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Nursery section is UGX 450,000 per term, Primary section is UGX 550,000 per term. 
+                        Transport and lunch services are optional.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        Do you offer scholarships?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, we offer merit-based and need-based scholarships for outstanding students.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        What are the school hours?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        School runs from 7:30 AM to 3:30 PM. Aftercare is available until 5:00 PM.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        Do you provide school transport?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, we provide school transport covering major routes in Kampala and surrounding areas.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                        Can I schedule a school tour?
+                    </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Absolutely! You can schedule a school tour through our website or by contacting our admissions office.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
                 
-                <div class="text-center mt-5">
-                    <a href="faqs.html" class="btn btn-outline-primary rounded-pill py-3 px-5">View All FAQs <i class="fa fa-arrow-right ms-2"></i></a>
-                </div>
+                <!-- <div class="text-center mt-5">
+                    <a href="" class="btn btn-outline-primary rounded-pill py-3 px-5">View All FAQs <i class="fa fa-arrow-right ms-2"></i></a>
+                </div> -->
             </div>
         </div>
         <!-- FAQ Section End -->
@@ -468,6 +549,40 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let subject = document.getElementById("subject").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let button = this.querySelector("button");
+
+    // Simple validation
+    if (!name || !email || !subject || !message) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    // Loading effect
+    button.innerHTML = "Sending...";
+    button.disabled = true;
+
+    setTimeout(function() {
+        // Reset button
+        button.innerHTML = 'Send Message <i class="fa fa-paper-plane ms-2"></i>';
+        button.disabled = false;
+
+        // Show success modal
+        let successModal = new bootstrap.Modal(document.getElementById('contactSuccessModal'));
+        successModal.show();
+
+        // Reset form
+        document.getElementById("contactForm").reset();
+    }, 1500);
+});
+</script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

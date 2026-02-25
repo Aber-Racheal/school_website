@@ -574,20 +574,109 @@
                                 <p class="mb-0">Tests scheduled every Saturday during application period</p>
                             </div>
                             
-                            <div class="alert alert-success">
-                                <i class="fa fa-download me-2"></i>
-                                <a href="#" class="text-success fw-bold">Download Application Form</a> (PDF, 250KB)
-                            </div>
+                           <div class="alert alert-success">
+    <i class="fa fa-download me-2"></i>
+    <a href="#" id="downloadApplicationBtn" class="text-success fw-bold">
+        Download Application Form
+    </a> (PDF, 250KB)
+</div>
                             
-                            <a href="contact.html" class="btn btn-primary rounded-pill py-3 px-5 w-100">
-                                <i class="fa fa-calendar-alt me-2"></i> Schedule a School Tour
-                            </a>
+                           <a href="#" id="schoolTourBtn" 
+   class="btn btn-primary rounded-pill py-3 px-5">
+   Schedule a School Tour
+</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- How to Apply End -->
+
+        <!-- School Tour Modal -->
+<div class="modal fade" id="schoolTourModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4">
+      <div class="modal-body">
+        <h4 class="text-primary text-center mb-3">Book a School Tour</h4>
+
+        <form id="schoolTourForm">
+          <div class="mb-3">
+            <label class="form-label">Parent/Guardian Name</label>
+            <input type="text" class="form-control" id="tourName" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="tourEmail" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Preferred Date</label>
+            <input type="date" class="form-control" id="tourDate" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Preferred Time</label>
+            <select class="form-select" id="tourTime" required>
+              <option value="">Select Time</option>
+              <option>9:00 AM</option>
+              <option>11:00 AM</option>
+              <option>1:00 PM</option>
+              <option>3:00 PM</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Number of Visitors</label>
+            <input type="number" class="form-control" id="tourVisitors" min="1" max="5" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Confirm Tour Booking
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Application Download Modal -->
+<div class="modal fade" id="applicationDownloadModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
+        <h5 class="text-success mb-3">Application Form Download</h5>
+        <p>
+          Your Brights Nursery & Primary School application form
+          will begin downloading shortly.
+        </p>
+        <button type="button" class="btn btn-success mt-3" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tour Success Modal -->
+<div class="modal fade" id="tourSuccessModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
+        <h4 class="text-success mb-3">Tour Scheduled 🎉</h4>
+        <p>
+          Your school tour at <strong>Brights Nursery & Primary School</strong> 
+          has been successfully booked.
+        </p>
+        <p>We look forward to welcoming you!</p>
+        <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
                <!-- School Uniform Start -->
@@ -857,6 +946,76 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+document.getElementById("downloadApplicationBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    // Show modal
+    let modal = new bootstrap.Modal(document.getElementById('applicationDownloadModal'));
+    modal.show();
+
+    // Download after short delay
+    setTimeout(function() {
+        const link = document.createElement("a");
+        link.href = "documents/brights-application-form.pdf";
+        link.download = "Brights-Application-Form.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }, 1200);
+});
+</script>
+
+<script>
+// Open Modal
+document.getElementById("schoolTourBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+    let modal = new bootstrap.Modal(document.getElementById('schoolTourModal'));
+    modal.show();
+});
+
+// Prevent Past Dates
+let today = new Date().toISOString().split("T")[0];
+document.getElementById("tourDate").setAttribute("min", today);
+
+// Handle Form Submission
+document.getElementById("schoolTourForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("tourName").value.trim();
+    let email = document.getElementById("tourEmail").value.trim();
+    let date = document.getElementById("tourDate").value;
+    let time = document.getElementById("tourTime").value;
+    let visitors = document.getElementById("tourVisitors").value;
+
+    if (!name || !email || !date || !time || !visitors) {
+        alert("Please complete all fields.");
+        return;
+    }
+
+    // Close booking modal
+    bootstrap.Modal.getInstance(document.getElementById('schoolTourModal')).hide();
+
+    // Show success modal
+    let successModal = new bootstrap.Modal(document.getElementById('tourSuccessModal'));
+    successModal.show();
+
+    // Reset form
+    this.reset();
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.get("tour") === "true") {
+        let modal = new bootstrap.Modal(document.getElementById('schoolTourModal'));
+        modal.show();
+    }
+
+});
+</script>
 </body>
 
 </html>

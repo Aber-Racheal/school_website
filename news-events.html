@@ -660,8 +660,16 @@
                             <p class="text-muted mb-md-0">Get the full academic calendar for 2026 in PDF format.</p>
                         </div>
                         <div>
-                            <a href="#" class="btn btn-primary rounded-pill py-3 px-5 me-2"><i class="fa fa-file-pdf me-2"></i> Download PDF</a>
-                            <a href="#" class="btn btn-outline-primary rounded-pill py-3 px-5"><i class="fa fa-print me-2"></i> Print</a>
+                            <a href="files/academic-calendar-2026.pdf" 
+   class="btn btn-primary rounded-pill py-3 px-5 me-2" 
+   id="downloadCalendarBtn" 
+   download>
+   <i class="fa fa-file-pdf me-2"></i> Download PDF
+</a>
+
+<a href="#" class="btn btn-outline-primary rounded-pill py-3 px-5" id="printCalendarBtn">
+   <i class="fa fa-print me-2"></i> Print
+</a>
                         </div>
                     </div>
                 </div>
@@ -670,7 +678,23 @@
     </div>
 </section>
 <!-- Academic Calendar End -->
-
+<!-- Modal -->
+<div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="calendarModalLabel">Download Started</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Your download of the Academic Calendar has started successfully. You can also print it if needed.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Newsletter Subscription -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -778,6 +802,27 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // Download PDF button
+    const downloadBtn = document.getElementById("downloadCalendarBtn");
+    downloadBtn.addEventListener("click", function() {
+        let modal = new bootstrap.Modal(document.getElementById('calendarModal'));
+        modal.show();
+    });
+
+    // Print button
+    const printBtn = document.getElementById("printCalendarBtn");
+    printBtn.addEventListener("click", function() {
+        window.print();
+        let modal = new bootstrap.Modal(document.getElementById('calendarModal'));
+        modal.show();
+    });
+
+});
+</script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

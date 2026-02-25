@@ -380,13 +380,29 @@
                             <p class="mb-0">Balancing academic, physical, social, and emotional growth.</p>
                         </div>
                     </div>
-                    <a href="contact.html" class="btn btn-primary rounded-pill py-3 px-5 mt-2">Download Curriculum</a>
-                </div>
+<a href="#" id="downloadCurriculumBtn" 
+   class="btn btn-primary rounded-pill py-3 px-5 mt-2">
+   Download Curriculum
+</a>                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- Curriculum Section End -->
+
+<div class="modal fade" id="curriculumModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
+        <h4 class="text-primary mb-3">Curriculum Download</h4>
+        <p>Your curriculum document will begin downloading now.</p>
+        <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Classes & Sections Start -->
 <section id="classes-sections" class="container-xxl py-5 bg-light">
@@ -803,10 +819,12 @@
                         </p>
                         <div class="row g-3">
                             <div class="col-sm-6">
-                                <a class="btn btn-light rounded-pill py-3 px-5" href="contact.html">Schedule Consultation</a>
-                            </div>
+<a href="#" id="consultationBtn" 
+   class="btn btn-light rounded-pill py-3 px-5">
+   Schedule Consultation
+</a>                            </div>
                             <div class="col-sm-6">
-                                <a class="btn btn-outline-light rounded-pill py-3 px-5" href="requirements.html">View Requirements</a>
+                                <a class="btn btn-outline-light rounded-pill py-3 px-5" href="admissions.html#requirements">View Requirements</a>
                             </div>
                         </div>
                     </div>
@@ -816,6 +834,63 @@
     </div>
 </div>
 
+
+<!-- Consultation Modal -->
+<div class="modal fade" id="consultationModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4">
+      <div class="modal-body">
+        <h4 class="mb-3 text-primary text-center">Book a Consultation</h4>
+
+        <form id="consultationForm">
+          <div class="mb-3">
+            <label class="form-label">Parent Name</label>
+            <input type="text" class="form-control" id="parentName" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="parentEmail" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Preferred Date</label>
+            <input type="date" class="form-control" id="consultDate" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Preferred Time</label>
+            <input type="time" class="form-control" id="consultTime" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Confirm Booking
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Success Modal -->
+<div class="modal fade" id="consultSuccessModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
+        <h4 class="text-success mb-3">Consultation Scheduled 🎉</h4>
+        <p>
+          Your consultation with <strong>Brights Nursery & Primary School</strong> 
+          has been successfully booked.
+        </p>
+        <p>We look forward to meeting you.</p>
+        <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
@@ -898,6 +973,57 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+document.getElementById("downloadCurriculumBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    let modal = new bootstrap.Modal(document.getElementById('curriculumModal'));
+    modal.show();
+
+    setTimeout(function() {
+        const link = document.createElement("a");
+        link.href = "documents/brights-curriculum.pdf";
+        link.download = "Brights-Nursery-Primary-Curriculum.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }, 1500);
+});
+</script>
+
+<script>
+// Open Consultation Modal
+document.getElementById("consultationBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+    let modal = new bootstrap.Modal(document.getElementById('consultationModal'));
+    modal.show();
+});
+
+// Handle Form Submission
+document.getElementById("consultationForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let parentName = document.getElementById("parentName").value.trim();
+    let parentEmail = document.getElementById("parentEmail").value.trim();
+    let consultDate = document.getElementById("consultDate").value;
+    let consultTime = document.getElementById("consultTime").value;
+
+    if (!parentName || !parentEmail || !consultDate || !consultTime) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    // Hide booking modal
+    bootstrap.Modal.getInstance(document.getElementById('consultationModal')).hide();
+
+    // Show success modal
+    let successModal = new bootstrap.Modal(document.getElementById('consultSuccessModal'));
+    successModal.show();
+
+    // Reset form
+    this.reset();
+});
+</script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

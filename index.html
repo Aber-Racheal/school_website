@@ -527,7 +527,7 @@
     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
         <div class="team-item text-center">
             <img class="img-fluid rounded-circle w-75 mb-4" src="img/user.png" alt="Head Teacher">
-            <h4 class="mb-1">MerylnGracious</h4>
+            <h4 class="mb-1">Meryln Gracious</h4>
             <p class="text-muted">Head Teacher</p>
         </div>
     </div>
@@ -536,7 +536,7 @@
     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
         <div class="team-item text-center">
             <img class="img-fluid rounded-circle w-75 mb-4" src="img/deputy-head.png" alt="Deputy Head Teacher">
-            <h4 class="mb-1">HevertonOmilana</h4>
+            <h4 class="mb-1">Heverton Omilana</h4>
             <p class="text-muted">Deputy Head Teacher</p>
         </div>
     </div>
@@ -545,7 +545,7 @@
     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
         <div class="team-item text-center">
             <img class="img-fluid rounded-circle w-75 mb-4" src="img/senior-teacher.png" alt="Senior Teacher">
-            <h4 class="mb-1">CarrissaNakimuli</h4>
+            <h4 class="mb-1">Carrissa Nakimuli</h4>
             <p class="text-muted">Senior Teacher</p>
         </div>
     </div>
@@ -714,7 +714,7 @@
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="h-100 d-flex flex-column justify-content-center p-5">
                         <h1 class="mb-4">Make Appointment</h1>
-                        <form>
+                        <form id="appointmentForm">
                             <div class="row g-3">
                                 <!-- Guardian Name -->
                                 <div class="col-sm-6">
@@ -785,6 +785,26 @@
     </div>
 </div>
 <!-- Appointment End -->
+
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
+        <h4 class="text-success mb-3">Appointment Successful 🎉</h4>
+        <p>
+          Your appointment at <strong>Brights Nursery & Primary School</strong> 
+          has been scheduled successfully.
+        </p>
+        <p>We will contact you shortly via email.</p>
+        <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
  <!-- Footer Start -->
@@ -871,6 +891,31 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Stop page reload
+
+    // Get values
+    let guardianName = document.getElementById("gname").value.trim();
+    let guardianEmail = document.getElementById("gmail").value.trim();
+    let childName = document.getElementById("cname").value.trim();
+    let childAge = document.getElementById("cage").value.trim();
+    let childClass = document.getElementById("cclass").value;
+
+    // Simple Validation
+    if (guardianName === "" || guardianEmail === "" || childName === "" || childAge === "" || childClass === "Choose Class") {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    // Show Bootstrap Modal
+    let successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    successModal.show();
+
+    // Reset Form After Submission
+    this.reset();
+});
+</script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

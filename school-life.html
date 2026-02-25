@@ -440,7 +440,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="leader-card bg-white rounded shadow-sm overflow-hidden">
                     <div class="position-relative">
-                        <img src="img/head-prefect.jpg" class="img-fluid" alt="Head Prefect" style="height: 300px; width: 100%; object-fit: cover;">
+                        <img src="img/head-prefect.png" class="img-fluid" alt="Head Prefect" style="height: 300px; width: 100%; object-fit: cover;">
                         <span class="leader-badge">Head Prefect</span>
                     </div>
                     <div class="p-4">
@@ -464,7 +464,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="leader-card bg-white rounded shadow-sm overflow-hidden">
                     <div class="position-relative">
-                        <img src="img/deputy-prefect.jpg" class="img-fluid" alt="Deputy Prefect" style="height: 300px; width: 100%; object-fit: cover;">
+                        <img src="img/deputy-prefect.png" class="img-fluid" alt="Deputy Prefect" style="height: 300px; width: 100%; object-fit: cover;">
                         <span class="leader-badge" style="background: linear-gradient(45deg, var(--bs-success), var(--bs-info));">Deputy Prefect</span>
                     </div>
                     <div class="p-4">
@@ -488,11 +488,11 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="leader-card bg-white rounded shadow-sm overflow-hidden">
                     <div class="position-relative">
-                        <img src="img/games-captain.jpg" class="img-fluid" alt="Games Captain" style="height: 300px; width: 100%; object-fit: cover;">
+                        <img src="img/games-captain.png" class="img-fluid" alt="Games Captain" style="height: 300px; width: 100%; object-fit: cover;">
                         <span class="leader-badge" style="background: linear-gradient(45deg, var(--bs-warning), var(--bs-danger));">Games Captain</span>
                     </div>
                     <div class="p-4">
-                        <h4 class="mb-2">James Okello</h4>
+                        <h4 class="mb-2">James Gordon</h4>
                         <p class="text-warning mb-2">Primary 6A</p>
                         <p class="mb-3">"Promoting sportsmanship, healthy competition, and physical fitness for all students."</p>
                         
@@ -907,9 +907,12 @@
                         <a href="contact.html" class="btn btn-primary rounded-pill py-3 px-5 me-3">
                             <i class="fa fa-phone me-2"></i> Contact Transport Office
                         </a>
-                        <a href="#" class="btn btn-outline-primary rounded-pill py-3 px-5">
-                            <i class="fa fa-download me-2"></i> Download Transport Form
-                        </a>
+                       <a href="files/transport-form.pdf" 
+   class="btn btn-outline-primary rounded-pill py-3 px-5" 
+   id="downloadTransportBtn" 
+   download>
+   <i class="fa fa-download me-2"></i> Download Transport Form
+</a>
                     </div>
                 </div>
             </div>
@@ -917,6 +920,24 @@
     </div>
 </section>
 <!-- Transport Services End -->
+
+<!-- Transport Form Modal -->
+<div class="modal fade" id="transportModal" tabindex="-1" aria-labelledby="transportModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="transportModalLabel">Download Started</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Your download of the Transport Form has started successfully. Please check your downloads folder.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- Health Services Start -->
@@ -1102,6 +1123,17 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const transportBtn = document.getElementById("downloadTransportBtn");
+    transportBtn.addEventListener("click", function() {
+        let modal = new bootstrap.Modal(document.getElementById('transportModal'));
+        modal.show();
+    });
+
+});
+</script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
